@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply min-w-[320px] bg-slate-50 font-sans text-slate-900 antialiased;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.08), transparent 28rem),
+      linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  }
+
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-white/80 bg-white shadow-card;
+  }
+
+  .focus-ring {
+    @apply outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10;
+  }
+}
